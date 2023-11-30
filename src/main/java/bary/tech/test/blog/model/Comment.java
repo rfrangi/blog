@@ -13,17 +13,6 @@ public class Comment {
 	private String comment;
 	private String author;
 	private LocalDateTime creationDate;
-	@ManyToOne
-	@JoinColumn(name="post_id")
-	private Post post;
-
-	public Post getPost() {
-		return post;
-	}
-
-	public void setPost(Post post) {
-		this.post = post;
-	}
 
 	public Long getId() {
 		return id;

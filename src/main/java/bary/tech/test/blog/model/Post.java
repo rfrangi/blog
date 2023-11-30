@@ -3,8 +3,6 @@ package bary.tech.test.blog.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class Post {
@@ -19,20 +17,6 @@ public class Post {
 	private String content;
 
 	private LocalDateTime creationDate;
-
-	@OneToMany(mappedBy="post", cascade = CascadeType.ALL)
-	private List<Comment> comments;
-
-	public List<Comment> getComments() {
-		if(comments != null) {
-			comments = new ArrayList<>();
-		}
-		return comments;
-	}
-
-	public void setComments(List<Comment> comments) {
-		this.comments = comments;
-	}
 
 	public String getTitle() {
 		return title;
