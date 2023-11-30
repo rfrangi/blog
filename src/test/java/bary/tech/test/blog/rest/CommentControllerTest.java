@@ -48,8 +48,8 @@ public class CommentControllerTest extends AbstractControllerTest {
 	public void shouldAddComment() throws Exception {
 
 		// given
-		String commentBody = "{\"content\":\"Test content\", \"author\":\"John Doe\"}";
-		NewCommentDto newComment = createComment("Test content", "John Doe");
+		String commentBody = "{\"content\":\"Test content\", \"author\":\"billy\"}";
+		NewCommentDto newComment = createComment("Test content", "billy");
 
 		// when
 		when(commentService.addComment(any(), eq(newComment))).thenReturn(1L);
